@@ -3,6 +3,7 @@ from decimal import Decimal, InvalidOperation
 class ATM:
     def __init__(self, balance):
         self.balance = balance
+        self.transaction_history = []
     
     def check_balance(self):
         return self.balance
@@ -10,6 +11,7 @@ class ATM:
     def deposit(self, amount):
         if amount > 0:
             self.balance += amount
+            self.transaction_history.append(f"+ ${amount:.2f}")
             return f"Deposited ${amount:.2f}. New balance: ${self.balance:.2f}"
         else:
             return "Deposit amount must be positive."
@@ -18,11 +20,16 @@ class ATM:
         if amount > 0:
             if self.balance >= amount:
                 self.balance -= amount
+                self.transaction_history.append(f"- ${amount:.2f}")
                 return f"Withdrew ${amount:.2f}. New balance: ${self.balance:.2f}"
             else:
                 return "Insufficient funds."
         else:
             return "Withdraw amount must be positive."
+
+    def trnsct_history(self):
+        return "\n".join(self.transaction_history)
+
             
         
     def __str__(self):
@@ -30,7 +37,7 @@ class ATM:
     
 atm = ATM(0)
 
-print("Select operation:\n 1 - Check balance\n 2 - Deposit money\n 3 - Withdraw money\n 4 - Exit\n(Type number only)")
+print("Select operation:\n 1 - Check balance\n 2 - Deposit money\n 3 - Withdraw money\n 4 - Transaction history\n 0 - Exit\n(Type number only)")
 
 while True:
     try:
@@ -54,6 +61,8 @@ while True:
         except InvalidOperation:
             print("Error: enter a number value.")
     elif choice == 4:
+        print(atm.trnsct_history())
+    elif choice == 0:
         print(f"ATM closed with balance {atm}")
         break
     else:
