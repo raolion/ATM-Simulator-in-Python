@@ -29,3 +29,7 @@ This program allows users to check their balance, deposit money, and withdraw fu
   ```bash
   python ATM.py
   ```
+  or
+  ```bash
+  python ATM_2_0.py
+  ```
