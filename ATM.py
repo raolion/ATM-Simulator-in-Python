@@ -1,4 +1,4 @@
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 
 class ATM:
     def __init__(self, balance):
@@ -10,7 +10,7 @@ class ATM:
     def deposit(self, amount):
         if amount > 0:
             self.balance += amount
-            return f"Deposited ${amount}. New balance: ${self.balance}"
+            return f"Deposited ${amount:.2f}. New balance: ${self.balance:.2f}"
         else:
             return "Deposit amount must be positive."
         
@@ -18,7 +18,7 @@ class ATM:
         if amount > 0:
             if self.balance >= amount:
                 self.balance -= amount
-                return f"Withdrew ${amount}. New balance: ${self.balance}"
+                return f"Withdrew ${amount:.2f}. New balance: ${self.balance:.2f}"
             else:
                 return "Insufficient funds."
         else:
@@ -26,7 +26,7 @@ class ATM:
             
         
     def __str__(self):
-        return f"${self.balance}"
+        return f"${self.balance:.2f}"
     
 atm = ATM(0)
 
@@ -45,13 +45,13 @@ while True:
         try:
             amount = Decimal(input("Enter deposit amount: $"))
             print(atm.deposit(amount))
-        except ValueError:
+        except InvalidOperation:
             print("Error: enter a number value.")
     elif choice == 3:
         try:
             amount = Decimal(input("Enter withdraw amount: $"))
             print(atm.withdraw(amount))
-        except ValueError:
+        except InvalidOperation:
             print("Error: enter a number value.")
     elif choice == 4:
         print(f"ATM closed with balance {atm}")
