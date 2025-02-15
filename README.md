@@ -22,10 +22,10 @@ This program allows users to check their balance, deposit money, and withdraw fu
   git clone https://github.com/raolion/ATM-Simulator-in-Python.git
   ```
 3. Navigate to the project folder:
-   ```bash
+  ```bash
    cd ATM-Simulator-in-Python
-   ```
+  ```
 4. Run the program:
-   ```bash
+  ```bash
    python ATM.py
-   ```
+  ```
