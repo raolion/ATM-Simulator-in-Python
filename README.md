@@ -23,9 +23,9 @@ This program allows users to check their balance, deposit money, and withdraw fu
   ```
 3. Navigate to the project folder:
   ```bash
-   cd ATM-Simulator-in-Python
+  cd ATM-Simulator-in-Python
   ```
 4. Run the program:
   ```bash
-   python ATM.py
+  python ATM.py
   ```
