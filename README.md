@@ -1,8 +1,8 @@
 ATM Simulator in Python (Multi-User Support)
-
 A Python-based ATM simulator that supports multiple users, allowing them to create accounts, deposit and withdraw funds, check balances, and view transaction history.
 
 📜 Description
+
 This program simulates a basic ATM system with support for multiple users. Each user can create an account with an initial balance, deposit and withdraw funds, check their current balance, and view their transaction history. The program uses the Decimal class for precise financial calculations and includes robust error handling for invalid inputs.
 
 ✨ Features
