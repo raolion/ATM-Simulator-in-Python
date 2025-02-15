@@ -1,69 +1,54 @@
-ATM Simulator in Python (Multi-User Support)
+Конечно! Вот обновленное описание в стиле вашего оригинального README, но с учетом новой функциональности `ATM_2_0.py`:
 
-A Python-based ATM simulator that supports multiple users, allowing them to create accounts, deposit and withdraw funds, check balances, and view transaction history.
+---
 
-📜 Description
+# ATM-Simulator-in-Python
 
-This program simulates a basic ATM system with support for multiple users. Each user can create an account with an initial balance, deposit and withdraw funds, check their current balance, and view their transaction history. The program uses the Decimal class for precise financial calculations and includes robust error handling for invalid inputs.
+A simple ATM simulator implemented in Python with multi-user support.
 
-✨ Features
+## 📜 Description
 
-    👤 Multi-User Support: Create and manage multiple users with unique names and balances.
+This program simulates a basic ATM system that supports multiple users. Each user can create an account, deposit and withdraw funds, check their balance, and view their transaction history. The program uses the `Decimal` class for precise financial calculations and includes robust error handling for invalid inputs.
 
-    💳 Check Balance: View the current balance of any user.
+## ✨ Features
 
-    💰 Deposit Money: Deposit funds into a user's account (positive amounts only).
+- **👤 Multi-User Support**: Create and manage multiple users with unique names and balances.
+- **💳 Check Balance**: View the current balance of any user.
+- **💰 Deposit Money**: Deposit funds into a user's account (positive amounts only).
+- **💸 Withdraw Money**: Withdraw funds from a user's account (positive amounts, with insufficient funds check).
+- **📜 Transaction History**: View the history of deposits and withdrawals for any user.
+- **🖥️ Interactive Menu**: User-friendly menu-driven interface for easy navigation.
+- **❌ Error Handling**: Handles invalid inputs and edge cases gracefully.
 
-    💸 Withdraw Money: Withdraw funds from a user's account (positive amounts, with insufficient funds check).
+## ⚒️ How to Use
 
-    📜 Transaction History: View the history of deposits and withdrawals for any user.
+1. Make sure you have Python 3 installed.
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/raolion/ATM-Simulator-in-Python.git
+   ```
+3. Navigate to the project folder:
+   ```bash
+   cd ATM-Simulator-in-Python
+   ```
+4. Run the program:
+   - For the original version:
+     ```bash
+     python ATM.py
+     ```
+   - For the new version with multi-user support:
+     ```bash
+     python ATM_2_0.py
+     ```
 
-    🖥️ Interactive Menu: User-friendly menu-driven interface for easy navigation.
+## 🚀 New in Version 2.0
 
-    ❌ Error Handling: Handles invalid inputs and edge cases gracefully.
+- **Multi-User System**: Now supports multiple users with unique accounts.
+- **Transaction History**: Each user has a record of their deposits and withdrawals.
+- **Improved Error Handling**: Better handling of invalid inputs and edge cases.
+- **Enhanced User Interface**: More intuitive menu options and feedback.
 
-⚒️ How to Use
+## 📂 File Structure
 
-    Install Python 3: Make sure you have Python 3 installed on your system.
-
-    Clone the Repository:
-    bash
-    Copy
-
-    git clone https://github.com/raolion/ATM-Simulator-in-Python.git
-
-    Navigate to the Project Folder:
-    bash
-    Copy
-
-    cd ATM-Simulator-in-Python
-
-    Run the Program:
-
-        For the original version:
-        bash
-        Copy
-
-        python ATM.py
-
-        For the new version with multi-user support:
-        bash
-        Copy
-
-        python ATM_2_0.py
-
-🚀 New in Version 2.0
-
-    Multi-User System: Now supports multiple users with unique accounts.
-
-    Transaction History: Each user has a record of their deposits and withdrawals.
-
-    Improved Error Handling: Better handling of invalid inputs and edge cases.
-
-    Enhanced User Interface: More intuitive menu options and feedback.
-
-📂 File Structure
-
-    ATM.py: The original version of the ATM simulator (single-user).
-
-    ATM_2_0.py: The updated version with multi-user support and transaction history.
+- **ATM.py**: The original version of the ATM simulator (single-user).
+- **ATM_2_0.py**: The updated version with multi-user support and transaction history.
